@@ -181,14 +181,15 @@ class InferenceDataset(Dataset):
             for i in range(len(protein_sequences)):
                 s = protein_sequences[i].split(':')
                 sequences.extend(s)
-                labels.extend([complex_names[i] + '_chain_' + str(j) for j in range(len(s))])
+                #labels.extend([complex_names[i] + '_chain_' + str(j) for j in range(len(s))])
+                labels.extend([complex_names[i] + 'chain' + str(j) for j in range(len(s))])
 
             lm_embeddings = compute_ESM_embeddings(model, alphabet, labels, sequences)
 
             self.lm_embeddings = []
             for i in range(len(protein_sequences)):
                 s = protein_sequences[i].split(':')
-                self.lm_embeddings.append([lm_embeddings[f'{complex_names[i]}_chain_{j}'] for j in range(len(s))])
+                self.lm_embeddings.append([lm_embeddings[f'{complex_names[i]}chain{j}'] for j in range(len(s))])
 
         elif not lm_embeddings:
             self.lm_embeddings = [None] * len(self.complex_names)

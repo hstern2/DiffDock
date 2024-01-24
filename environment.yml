@@ -1,6 +1,7 @@
 name: DiffDock
 channels:
   - pytorch
+  - conda-forge
   - defaults
 dependencies:
   - blas=1.0=openblas

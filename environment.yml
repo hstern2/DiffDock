@@ -7,7 +7,7 @@ dependencies:
   - _openmp_mutex=5.1=1_gnu
   - blas=1.0=mkl
   - ca-certificates=2023.12.12=h06a4308_0
-  - cudatoolkit=11.3.1=h2bc3f7f_2
+    #- cudatoolkit=11.3.1=h2bc3f7f_2
   - intel-openmp=2023.1.0=hdb19cb5_46306
   - ld_impl_linux-64=2.38=h1181459_1
   - libffi=3.4.4=h6a678d5_0
@@ -19,8 +19,8 @@ dependencies:
   - openssl=3.0.12=h7f8727e_0
   - pip=23.3.1=py39h06a4308_0
   - python=3.9.18=h955ad1f_0
-  - pytorch=1.12.1=py3.9_cuda11.3_cudnn8.3.2_0
-  - pytorch-mutex=1.0=cuda
+    #- pytorch=1.12.1=py3.9_cuda11.3_cudnn8.3.2_0
+    #- pytorch-mutex=1.0=cuda
   - readline=8.2=h5eee18b_0
   - setuptools=68.2.2=py39h06a4308_0
   - sqlite=3.41.2=h5eee18b_0
@@ -45,7 +45,7 @@ dependencies:
       - contourpy==1.2.0
       - cycler==0.12.1
       - deepspeed==0.5.9
-      - dllogger==1.0.0
+        # - dllogger==1.0.0
       - dm-tree==0.1.8
       - e3nn==0.5.1
       - einops==0.7.0
